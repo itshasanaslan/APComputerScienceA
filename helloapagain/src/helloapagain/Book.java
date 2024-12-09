@@ -1,57 +1,73 @@
 package helloapagain;
 
+
+/*
+ * 
+ * Write a method applyDiscount() and give a  double discountRate on the parameter. 
+ * Apply the discount rate on the book price and print "The new price is: " +price.
+ */
+
+
+
 public class Book {
 
-	private String title;
+	// name
+	// author
+	// price
+	
+	private String name;
 	private String author;
-	private int year;
-	private boolean checkedOut;
+	private double price;
 	
-	public Book(String title, String author, int year, boolean checkedOut) {
-		super();
-		this.title = title;
-		this.author = author;
-		this.year = year;
-		this.checkedOut = checkedOut;
-	}
-
-
 	
-	public String getTitle() {
-		return title;
+	// constructor
+	public Book(String name, String bookAuthor, double bookPrice) {
+		this.name = name;
+		author = bookAuthor.substring(0, 1).toUpperCase() + bookAuthor.substring(1);
+		price = bookPrice;
+		System.out.println("The new book is created");
+
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
+	
+	
+
 	public String getAuthor() {
 		return author;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-	public int getYear() {
-		return year;
-	}
-	public void setYear(int year) {
-		this.year = year;
-	}
-	public boolean isCheckedOut() {
-		return checkedOut;
-	}
-	public void setCheckedOut(boolean checkedOut) {
-		this.checkedOut = checkedOut;
+	
+	// apply discount 15%
+	public void applyDiscount(double discountRate) {
+		
+		// price * discountRate
+		price = price - price * discountRate;
+		System.out.println("Price is changed. The new price is: " + price );
+		
 	}
 	
-	public void checkOut() {
-		setCheckedOut(true);
+	public void printPrice() {
+		System.out.println("Price:" + price );
+
 	}
 	
-	public void returnBook() {
-		setCheckedOut(false);
+	
+	// that gives the book price with a discount. But, I just want to check
+	
+	public double applyDiscountForTest(double discountRate) {
+			return price - price * discountRate;
 	}
 	
-	public String toString() {
-		return getTitle() +  " by " + getAuthor() + "(" + year + ")" + ".On library: " + !isCheckedOut();
+	
+	public void sayHello() {
+		System.out.println("Hello ");
 	}
+	
+	public void sayHello(String name) {
+
+		System.out.println("Hello " + name);
+
+	}
+	
 	
 }
+
+

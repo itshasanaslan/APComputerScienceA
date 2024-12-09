@@ -1,53 +1,81 @@
 package helloapagain;
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		
-			Book book = new Book("Lord of the Rings", "Tolkien", 1950,false);
-			book.checkOut();
-			book.returnBook();
-			System.out.println(book.toString());
+
+		// LEAP YEARS
 	
-			Scanner scanner = new Scanner(System.in);
-			
-			String val = "1";
-			while(val != "") {
-				System.out.print(val);
-				val = scanner.nextLine();
-			}
-			
-			System.out.println("Finished!!");
-			
+		int year = 2024;
+		
+		
+		//NESTED IF STATEMENTS
+		
+		
+		// create a function that return a boolean: if the integer is  a leap year or not
+		// simplify the statements
+		
+		boolean isLeapYear = checkIfLeapYear(2024);
+		if (isLeapYear) {
+			System.out.println("Leap");
+		}
+		else {
+			System.out.println("not leap");
+
+		}
+		
 	}
 	
-	public static void temp() {
-		
-		// int, double, bit 0 1 0= false, 1=true
-		
-		int myAge= 26; // age is a variable
-		// a pair of shoes 50.43 dollars
-		
-		double price = 50;
-		// store me a bit about if I like ice-cream or not
-		boolean iLikeIt = false;
-		
-		// binary, character a b c d e f g
-		byte x = 70; // ASCII -F-
-
-		  
-		// string
-		// 68 72 63 82 83
-
-		// char N, char A, Char D, char I, char R
-		int age = 26;
-		double temperature = 25.2;
-		char firstLetter = 'A';
-		String name = "Aslan";
-		boolean doILove = true;
+	
+	public static boolean checkIfLeapYear(int year) {
+		// first: can it be divided by 4:
+				//true:
+					// -> if it's divisible by 100:
+						// if true:
+							// can it be divided by 400
+								// 
+						//if false, false
+				
+				//False -> it's a leap year
+	return  (year % 4 ==0 && (year % 100 !=0 || year % 400 ==0));
 	}
+	
 }
+
+
+
+
+
+
+	
+	
+
+
+
+
+/*
+ * Challenges:
+
+// Create a function which changes the random number. example: manager.randomizeAgain(); This function also prints that "New random number is generated between min and max." Also provide the min and max.
+
+//Whenever user guesses the number correctly, congratulate and randomizeAgain() inside play() function;
+
+//When creating GameManager object, give min and max values as parameters.
+ */
+
+
+
+
+
+
+
+
+
+
+// (int) (Math.random() * (max - min + 1)) + min
+
+	
+
+
