@@ -12,7 +12,7 @@ public class VendingMachine {
 	
 	
 	public VendingMachine(Item item1, Item item2, Item item3, Item item4, Item item5) {
-		
+		 
 		this.item1 = item1;
 		this.item2 = item2;
 		this.item3 = item3;
@@ -34,7 +34,8 @@ public class VendingMachine {
 	}
 	
 	
-	public void operate(User user) {
+	public boolean operate(User user) {
+	
 		System.out.print("You are here to buy: ");
 		Scanner scanner = new Scanner(System.in);
 		
@@ -54,9 +55,12 @@ public class VendingMachine {
 			this.buy(user, item5);
 		}
 		else {
-			System.out.println("We don't have that product.");
+			
+			return false;
 		}
 	
+		return true;
+		
 	}
 	
 	public void buy(User currentUser, Item whichItem) {

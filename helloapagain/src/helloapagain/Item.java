@@ -2,7 +2,7 @@ package helloapagain;
 
 public class Item {
 
-			// 3 properties name, stock, money
+		// 3 properties name, stock, money
 		String name;
 		int stock;
 		double price;

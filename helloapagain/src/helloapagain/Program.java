@@ -5,8 +5,48 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-
+		vendingMachineCaller();
+	
 		
+		
+	}
+	
+	public static boolean checkIfLeapYear(int year) {
+	
+	return  (year % 4 ==0 && (year % 100 !=0 || year % 400 ==0));
+	}
+	
+	
+public static void whileLoop() {
+	int x = 1;
+	Scanner sc = new Scanner(System.in);
+	
+	// 10
+	
+	int score = 5;
+	
+	// write a while loop to read an integer between 1-11
+	// if it is true, exit
+	//  false, reask the user to enter a score
+
+	while ( !(score > 0 && score < 11)  ) {
+		
+		System.out.print("Enter a score 1-10: ");
+		//read the number
+		score = sc.nextInt();
+		System.out.println();
+	}
+	
+	System.out.println("Score is : " + score);
+
+	
+	
+	//while statement to print even numbers between 1 to 30
+}
+	
+	
+	public static void vendingMachineCaller() {
+
 		Item item1 = new Item("M&M", 10, 7.54);
 		Item item2 = new Item("Ice-cream", 5, 10.23);
 		Item item3 = new Item("Water", 5, 2.32);
@@ -18,24 +58,16 @@ public class Program {
 		
 		User user1 = new User("deniz", 4);
 		
-	
+		machine1.showSnacks();
 		
-		// exit the while loop
-		double x = 1;
-		
-		boolean canContinue = true;
-		
-		while (canContinue) {
+		while(machine1.operate(user1)) {
 			machine1.showSnacks();
-			machine1.operate(user1);
-		} 
-		
+
+			// change the value of canOperate when the user wanted to leave
+			
+		}
 	}
 	
-	public static boolean checkIfLeapYear(int year) {
-	
-	return  (year % 4 ==0 && (year % 100 !=0 || year % 400 ==0));
-	}
 	
 }
 
