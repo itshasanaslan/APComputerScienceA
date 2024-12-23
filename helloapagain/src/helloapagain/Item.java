@@ -17,7 +17,7 @@ public class Item {
 		
 		
 		public String toText() {
-			return " Name: " + this.name  +" Stock: " + this.stock + " price: $" + this.price;
+			return " Name: " + this.name  +" | Stock: " + this.stock + " price: $" + this.price;
 		}
 	
 }
