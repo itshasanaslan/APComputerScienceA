@@ -5,24 +5,60 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-		
-		String sentence = "There is a ladybug over there!";
-		System.out.println( removeSpaces(sentence) );
-
+	
+		multiplicationEasy();
+		multiplicationHard();
 	}
 	
 	
-	public static String removeSpaces(String text) {
-		String anotherString = "";
+	public static void multiplicationEasy() {
+
+		for (int firstNumber = 2; firstNumber <=10; firstNumber += 2) {
 		
-		for (int i = 0; i < text.length(); i++ ) {
-			
-			if (text.charAt(i) != ' ') {
-				anotherString += text.charAt(i);
-			}	
+			// 2 x 10 = 20
+			for (int secondNumber = 1; secondNumber <= 10; secondNumber++) {
+				System.out.println(firstNumber + " x " + secondNumber + " = " + (firstNumber * secondNumber));
+			}
+			System.out.println("");
 		}
+	}
+ 	public static void multiplicationHard() {
+		//Task: Write a program to display a multiplication table (1–10).
+		//Skip rows where the multiplier is odd (use continue).
+		//Stop completely if the product exceeds 50 (use break).
+	
+		// Instead of incrementing i++, we can just use i += 2; and remove the if (i % 2 ==1) statement.
+	for (int i = 1; i <= 10; i++) {
+			
+			// check if it's an odd number.
+			if (i % 2 == 1) {
+				continue;
+			}
+			// 2 x 5 = 10
+			for (int j = 1; j <= 10; j++) {
+				int product = i * j;
+			
+				//Stop completely if the product exceeds 50 (use break).
+				if (product > 50) {
+					break;
+				}
+				
+				System.out.println(i + " x " + j + " = " + product);
+			}
+			
+			System.out.println("");
+		}
+	}
+	
+	public static void  palindromeStuff(String text) {
+		String palindromeText = "Delia Saw I Was Ailed";
+		String sentence = "There is a ladybug over there!";
+
 		
-		return anotherString;
+		StringManipulator manipulator = new StringManipulator();
+		
+		System.out.println(manipulator.isPalindrome(palindromeText));
+// Borrow or rob
 	}
 	
 	public static boolean checkIfLeapYear(int year) {
