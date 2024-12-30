@@ -5,9 +5,15 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
+	int x = 10;
+	int y = 5;
 	
-		multiplicationEasy();
-		multiplicationHard();
+	boolean firstCondition = (y / x) == 0;
+	boolean secondCondition  = (x != 0);
+	
+
+	
+	System.out.println(firstCondition ||  secondCondition);
 	}
 	
 	
