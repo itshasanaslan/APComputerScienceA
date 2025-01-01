@@ -2,20 +2,31 @@ package helloapagain;
 
 import java.util.Scanner;
 
+import unit5.Dog;
+
+
 public class Program {
 
 	public static void main(String[] args) {
-	int x = 10;
-	int y = 5;
-	
-	boolean firstCondition = (y / x) == 0;
-	boolean secondCondition  = (x != 0);
-	
-
-	
-	System.out.println(firstCondition ||  secondCondition);
+		Dog dog1 = new Dog();
+		Dog dog2 = new Dog("Jack", "Golden", 2);
+		
+		dog2.eat();
+		
 	}
 	
+	
+	public static void booleanStuff() {
+		int x = 10;
+		int y = 5;
+		
+		boolean firstCondition = (y / x) == 0;
+		boolean secondCondition  = (x != 0);
+		
+
+		
+		System.out.println(firstCondition ||  secondCondition);
+	}
 	
 	public static void multiplicationEasy() {
 
