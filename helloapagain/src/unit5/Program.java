@@ -1,20 +1,24 @@
 package unit5;
 
+import java.util.UUID;
+
 public class Program {
 
 	public static void main(String[] args) {
-	
-		// public and private
-		// always mark your attributes as private
-		// access the data by returning them
 		
-		Dog dog1 = new Dog();
-		dog1.setName("Jack");
-		System.out.println(dog1.getName());
 		
+		Student deniz = new Student("deniz", "iper", "3284r7e763", 3.99);
+		
+
+		Student bilgi = new Student("bilgi", "asdsa", "3284r7e763", 3.99);
+		
+		
+		Student.echoCounter();
+		
+
 	}
 	
-	public static void dogStuff() {
+	public void dogStuff() {
 		
 		// creating an instance
 		// instantiation

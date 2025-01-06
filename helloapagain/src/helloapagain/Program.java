@@ -8,12 +8,17 @@ import unit5.Dog;
 public class Program {
 
 	public static void main(String[] args) {
-		Dog dog1 = new Dog();
-		Dog dog2 = new Dog("Jack", "Golden", 2);
 		
-		dog2.eat();
+		Dog dog = new Dog();
+		
+		dog.setName("jack");
+		
+
+// debugging
+		// ctrl s
 		
 	}
+
 	
 	
 	public static void booleanStuff() {

@@ -1,15 +1,18 @@
 package unit5;
 
+
+
 public class Dog {
 	// name, breed and age are ATTRIBUTES of Dog.
-	
 	//default access modifier
-	private String name;
+	private String name;  // default
+	// is not encapsulated
 	private String breed;
 	// datatype variablename;
 	private int age;
 	public int timesDataRequested;
-	
+	// fields can be accessed from class' methods.
+	// they are in class' scope.
 	//public ClassName () {}
 	// parameterized CONSTRUCTOR
 	public Dog (String name, String breed, int age) {
@@ -35,12 +38,13 @@ public class Dog {
 	// behaviors
 	// a dog eats
 	// it doesn't run unless I call it explicitly
-	 public void eat() {
+	 public void eat() {		 
 		System.out.println( name +" is eating my entire salary");
-	}
+	 }
 	
 	// bark - METHOD (function) with a parameter
 	public void bark(boolean isHungry) {
+		// x?
 		System.out.println("Bark bark bark!");
 		if (isHungry) {
 			eat();
@@ -54,17 +58,28 @@ public class Dog {
 	
 	// GETTERS / returning private data in a controlled way
 	public String getName() {
-		this.timesDataRequested++;
-		return name;
+		
+		String n = "";
+		
+		n += name.substring(0, 1).toUpperCase();
+		n+= name.substring(1);
+		
+		
+		return n;
 	}
 	
 	// SETTER
 	public void setName(String newName) {
+		System.out.println("Hey be careful!Name is changing");
 		this.name = newName;
 	}
 	public int getAge() {
 		this.timesDataRequested++;
 		return this.age;
+	}
+	
+	public void bark() {
+		System.out.println(getName() + " is barking");
 	}
 	
 }
