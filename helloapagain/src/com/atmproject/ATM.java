@@ -3,19 +3,51 @@ package com.atmproject;
 import java.util.Scanner;
 
 public class ATM {
-	String name;
-	double balance;
+	private String name;
+	private double balance;
 	
 	public ATM(String name, double balance) {
 		this.name = name;
 		this.balance = balance;
 	}
 	
+	// override constructor
+
+	
+	public ATM() {
+		// to be able to give the values later
+	}
+
+
+	// GETTERS
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	
+	public double getBalance() {
+		return this.balance;
+	}
+	
+	
+	// MUTATOR / SETTERS
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	
+	 
 	
 	public boolean validatePin(String inputPin, User user) {
-		if (inputPin == user.pin) {
+		if (inputPin == user.getPin()) {
 			System.out.println("User logged in. Welcome to " + name + " ATM!");
-			 user.printBalance();
+			 System.out.println(user);
 			return true;
 		}
 		
@@ -41,7 +73,8 @@ public class ATM {
 			System.out.print("Operation (1-4): ");
 			selection =sc.nextInt();
 			if (selection == 1) {
-				user.printBalance();
+				System.out.println(user);
+
 			}
 			else if (selection == 2) {
 				System.out.println("Current operation: Deposit" );

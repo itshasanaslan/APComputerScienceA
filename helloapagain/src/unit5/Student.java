@@ -2,8 +2,8 @@ package unit5;
 
 public class Student {
 	public static int studentCounter;
-	private String name;
-	private String lastName;
+	private String name; // attribute
+	private String lastName; // restricting fields' scope
 	private String id;
 	private double gpa;
 	
@@ -34,36 +34,36 @@ public class Student {
 	}
 	
 	
-	protected String getName() {
+	public String getName() {
 		return name;
 	}
 
-	protected void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	protected String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	protected void setLastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 
-	protected void setId(String id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	protected double getGpa() {
+	public double getGpa() {
 		return gpa;
 	}
 
 	// mutator methods
-	protected void setGpa(double gpa) {
+	public void setGpa(double gpa) {
 		this.gpa = gpa;
 	}
 
@@ -71,3 +71,28 @@ public class Student {
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

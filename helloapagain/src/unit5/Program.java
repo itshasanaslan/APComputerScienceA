@@ -6,14 +6,16 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		
-		Student deniz = new Student("deniz", "iper", "3284r7e763", 3.99);
-		
-
-		Student bilgi = new Student("bilgi", "asdsa", "3284r7e763", 3.99);
-		
-		
 		Student.echoCounter();
+
+		Student deniz = new Student("deniz", "iper", "3284r7e763", 3.99);
+		Student.echoCounter();
+		// SCOPE
+		Student bilgi = new Student("bilgi", "asdsa", "3284r7e763", 3.99);
+		Student.echoCounter();
+
+	
+	
 		
 
 	}

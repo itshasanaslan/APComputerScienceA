@@ -1,9 +1,10 @@
 package com.atmproject;
 
 public class User {
-	String name;
-	double accountBalance;
-	String pin;
+	private String name;
+	
+	private double accountBalance;
+	private String pin;
 
 	public User(String name, double accountBalance, String pin) {
 		this.name = name;
@@ -11,10 +12,36 @@ public class User {
 		this.pin = pin;
 	}
 	
-	public void printBalance () {
-		System.out.println(name + "  || Account Balance: $" +  accountBalance);
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+	public String getPin() {
+		return pin;
+	}
+
+	public void setPin(String pin) {
+		this.pin = pin;
 	}
 	
+	public String toString() {
+		int indexOfSpace = name.indexOf(" ");
+		return name.substring(0, 1)  + "****"+  " " + name.substring(indexOfSpace +1 , indexOfSpace+2) + "****  || Account Balance: $" +  accountBalance;
+
+	}
 	
 	public boolean deposit(double amount) {
 		if (amount < 0) {
@@ -24,7 +51,7 @@ public class User {
 		else {
 				accountBalance += amount;
 				System.out.println("SUCCESS! $" + amount + " is added to your account");
-				printBalance();
+				System.out.println(this);
 				return true;
 		}
 		
@@ -43,7 +70,7 @@ public class User {
 		else {
 			accountBalance -= amount;
 			System.out.println("SUCCESS! $" + amount + " is withdrawn from your account");
-			printBalance();
+			System.out.println(this);
 			return true;
 		}
 	}
