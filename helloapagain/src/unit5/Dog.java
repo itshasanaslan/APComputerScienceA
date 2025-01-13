@@ -11,6 +11,7 @@ public class Dog {
 	// datatype variablename;
 	private int age;
 	public int timesDataRequested;
+	int x;
 	// fields can be accessed from class' methods.
 	// they are in class' scope.
 	//public ClassName () {}

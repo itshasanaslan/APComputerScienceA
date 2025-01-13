@@ -19,8 +19,5 @@ public class Program {
 	}
 
 	
-	public static String censorName(String fullName) {
-		
-	}
-	
+
 }
