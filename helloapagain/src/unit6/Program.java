@@ -6,7 +6,77 @@ public class Program {
 
 	public static void main(String[] args) {
 	 
+		String[] names = {"demir", "deniz", "nadir", "mete"};
 		
+		System.out.println(ArrayManipulator.getArrayAsString(names));
+		
+		int[] numbersArray = getRandomArray(10);
+		System.out.println(ArrayManipulator.getArrayAsString(numbersArray));
+
+		
+		int[] customArray = {-52, -4, -62, -22, -6, -4, -50, -10, -59};
+		int max = ArrayManipulator.getMax(customArray);
+		System.out.println(max);
+		// returns a string
+		// ["demir", "deniz", "nadir", "mete"]		
+		
+		
+		
+		for (int i = 0; i < customArray.length; i++) {
+			System.out.println(customArray[i]);
+
+		}
+		
+		
+		for (int element : customArray) {
+			System.out.println(element);
+		}
+		
+		}
+		
+	
+	
+	public static void enhancedForLoop() {
+		// sequence of data which has the same type
+
+				// traversing 
+				
+				int[] myArray = getRandomArray(10);
+				
+				System.out.println("1st loop*************");
+
+				// classical for loop
+				// passed by reference
+				// if you want to modify data
+				for (int i = 0; i < myArray.length; i++) {
+					
+					System.out.println(myArray[i]);
+					myArray[i] += 1;
+				}
+				
+				System.out.println("2nd loop*************");
+				
+				//enhanced for loop
+				// passed by value & copy
+				// if you are just reading data from your array
+				for (int element : myArray) {
+					System.out.println(element);
+					element++;
+				}
+				
+				System.out.println("3rd loop*************");
+
+			for (int i = 0; i < myArray.length; i++) {
+					
+					System.out.println(myArray[i]);
+					
+				}
+				
+				
+	}
+	
+	public static void arrayIntro() {
+
 		// Array in maths
 		// is a sequence of data
 		
@@ -62,6 +132,11 @@ public class Program {
 	// with 100 elements
 	int[] myRandomArray1 = getRandomArray(100);
 	
+	System.out.println(myRandomArray1[0]);
+	arrayPassByReference(myRandomArray1);
+	
+	System.out.println("First element after function: " + myRandomArray1[0]);
+
 
 	}
 	

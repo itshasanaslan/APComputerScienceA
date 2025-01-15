@@ -29,6 +29,7 @@ public class Program {
 
 		
 		
+
 	}
 	
 	public void dogStuff() {
@@ -40,9 +41,10 @@ public class Program {
 	}
 	
 	
-	public static void passByValue(String x) {
-		x = "bilgi";
-		System.out.println("Printing: " + x);
+	public static void passByValue(String name) {
+		System.out.println("Printing: " + name);
+		name = "bilgi";
+		System.out.println("Printing: " + name);
 	}
 	
 	
