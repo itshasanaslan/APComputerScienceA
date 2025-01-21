@@ -9,9 +9,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Dog dog = new Dog();
-		
-		dog.setName("jack");
+		vendingMachineCaller();
 		
 
 // debugging
@@ -130,11 +128,15 @@ public class Program {
 		Item item9 = new Item("Apple juice", 1, 6.24);
 		Item item10 = new Item("Orange juice", 1, 6.24);
 
-
+		Item[] items = {item1, item2,item3,item4,item5,item6,item7};
 		
-		VendingMachine machine1 = new VendingMachine(item1, item2, item3, item4, item5);
-		VendingMachine machine2 = new VendingMachine(item10, item3, item7, item4, item5);
-		User user1 = new User("deniz", 4);
+		Item[] items2 = {item5,item6,item7};
+
+		VendingMachine machine2 = new VendingMachine(items);
+		
+		VendingMachine machine3 = new VendingMachine(items2);
+
+		User user1 = new User("deniz", 7);
 		
 		String name;
 		double money;

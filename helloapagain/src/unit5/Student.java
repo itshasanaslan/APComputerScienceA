@@ -67,7 +67,11 @@ public class Student {
 		this.gpa = gpa;
 	}
 
-
+	
+	// overriding
+	public String toString() {
+		return this.name + " " + this.lastName + " GPA:" + this.gpa; 
+	}
 	
 	
 }

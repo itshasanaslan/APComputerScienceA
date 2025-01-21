@@ -6,7 +6,6 @@ public class ArrayManipulator {
 	public static String getArrayAsString(String[] someArray) {
 		String modified = "[\"";
 		
-		
 		for (String element: someArray) {
 			
 			modified += element + "\", \"";
@@ -33,6 +32,23 @@ public class ArrayManipulator {
 		// ["demir", "deniz", "nadir", "mete"]
 	}
 	
+	
+	
+	public static String getArrayAsString(boolean[] someArray) {
+		String modified = "[\"";
+		
+		for (boolean element: someArray) {
+			
+			modified += element + "\", \"";
+		}
+		
+		return modified.substring(0, modified.length() - 3) + "]";
+	
+		// ["demir", "deniz", "nadir", "mete"]
+	}
+	
+	
+	
 	// write a function that returns the max number in an array
 	
 	public static int getMax(int[] array) {
@@ -47,6 +63,24 @@ public class ArrayManipulator {
 		
 		return max;
 	}
+	
+	
+	
+	
+	/*
+	 * 
+
+min return the min element in the array
+3sum return the sum
+4occurence {1,3,4,3, 5, 3, 1}   (array, 3);
+
+
+
+
+
+
+	 * 
+	 */
 	
 	
 	

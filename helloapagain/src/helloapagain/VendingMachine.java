@@ -4,32 +4,39 @@ import java.util.Scanner;
 
 public class VendingMachine {
 	
-	Item item1;
-	Item item2;
-	Item item3;
-	Item item4;
-	Item item5;
+	
+	// declaring an array
+	private Item[] items;
 	
 	
-	public VendingMachine(Item item1, Item item2, Item item3, Item item4, Item item5) {
-		 
-		this.item1 = item1;
-		this.item2 = item2;
-		this.item3 = item3;
-		this.item4 = item4;
-		this.item5 = item5;
+	public VendingMachine(Item[] items) {
+		this.items = items;
 	}
 	
+	
+
+	
+	// 
 	
 	// 1) Name Stock Price
 	
 	public void showSnacks() {
 		System.out.println("---------------------------------");
-		System.out.println("1) " +  item1.toText());
-		System.out.println("2) " +  item2.toText());
-		System.out.println("3) " +  item3.toText());
-		System.out.println("4) " +  item4.toText());
-		System.out.println("5) " +  item5.toText());
+		//System.out.println("1) " +  item1.toText());
+		
+		/*
+		int counter = 1;
+		for (Item thatItem : this.items) {
+			System.out.println( counter + ") " +  thatItem.toText());
+			counter++;
+		}
+		*/
+		
+		for (int i = 1 ;  i < this.items.length + 1;i++) {
+			Item thatItem = this.items[i];
+			System.out.println( i + ") " +  thatItem.toText());
+		}
+		
 		System.out.println("---------------------------------");
 	}
 	
@@ -40,25 +47,15 @@ public class VendingMachine {
 		Scanner scanner = new Scanner(System.in);
 		
 		int selection = scanner.nextInt();
-		
-		if (selection == 1) {
-			this.buy(user, item1);
-		}
-		else if (selection == 2) {
-			this.buy(user, item2);
-		}
-		else if (selection == 3) {
-			this.buy(user, item3);
-		}else if (selection == 4) {
-			this.buy(user, item4);
-		}else if (selection == 5) {
-			this.buy(user, item5);
+		selection--;
+		if (selection < 0 || selection > this.items.length -1) {
+			System.out.println("That item does not exist");
 		}
 		else {
-			
-			return false;
+			this.buy(user, this.items[selection]);
 		}
-	
+		
+
 		return true;
 		
 	}

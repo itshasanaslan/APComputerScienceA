@@ -1,11 +1,68 @@
 package unit6;
 
 import unit5.Dog;
+import unit5.Student;
 
 public class Program {
 
 	public static void main(String[] args) {
 	 
+		ArrayManipulator manipulator = new ArrayManipulator();
+		
+		Student[] studentArray = {
+				new Student("deniz", "iper", "u733", 4.00), 
+				new Student("mete", "önder", "us733", 4.00),
+				new Student("ara", "telli", "us7233", 3.00)
+				};
+		
+		for (int i = 0; i < studentArray.length; i++) {
+			studentArray[i].setGpa(4);
+		}
+		
+		
+		printStudents(studentArray);
+		
+		
+		
+		for (int i = 0; i < studentArray.length; i++) {
+			Student tempStudent = studentArray[i];
+			tempStudent.setGpa(3);
+		}
+		
+		printStudents(studentArray);
+
+		
+		
+		
+		
+//		
+	
+		
+		}
+		
+	
+	public static void printStudents(Student[] s) {
+		for (int i = 0; i < s.length; i++) {
+			Student tempStudent = s[i];
+			System.out.println(tempStudent);
+		}
+	}
+	
+	
+	public static void januaryTwenty() {
+		// ARRAYS
+		// Sequence of items which have the same data type
+		
+		// declaration & I am declaring an array
+		int[] myArray;
+		
+		//instantiation
+		
+		
+		// initialization
+		int[] mysecondArray = new int[3];
+		
+		
 		String[] names = {"demir", "deniz", "nadir", "mete"};
 		
 		System.out.println(ArrayManipulator.getArrayAsString(names));
@@ -32,8 +89,7 @@ public class Program {
 			System.out.println(element);
 		}
 		
-		}
-		
+	}
 	
 	
 	public static void enhancedForLoop() {
