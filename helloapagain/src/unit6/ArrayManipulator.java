@@ -20,8 +20,7 @@ public class ArrayManipulator {
 	
 	public static String getArrayAsString(int[] someArray) {
 		String modified = "[";
-		
-		
+	
 		for (int element: someArray) {
 			
 			modified += element + ", ";
@@ -65,23 +64,37 @@ public class ArrayManipulator {
 	}
 	
 	
-	
-	
-	/*
-	 * 
+	// array, value 
+	// remove an element from an array
+	// resizing the array
+	// returning array
+	public static int[] removeFromArray(int[] array, int value) {
+		int counterForValue = 0;
+		// keep track of the occurence of that value
+		for (int number: array) {
+			// because we just read the data,
+			// it is okay to use enhanced for loop
+			if (number == value ) {
+				counterForValue++;
+			}
+		}
+		// create a new array but smaller so it has enough size for the new elements
+		// if my array has 8 elements, and if I remove 3 of them, copiedArray must have 5 elements.
+		int[] copiedArray = new int[array.length - counterForValue];
+ 		// [0, 0, 0, 0, 0] // initial values in our int array
+		int counter = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] != value ) {
+				// it is not our value which means we can transfer it to new array
+				// use the counter index, because it only increments in this code block and is safe
+				copiedArray[counter++] = array[i];
+			}
+		}
+		
 
-min return the min element in the array
-3sum return the sum
-4occurence {1,3,4,3, 5, 3, 1}   (array, 3);
-
-
-
-
-
-
-	 * 
-	 */
-	
+		// return its reference so we can access it
+		return copiedArray;
+	}
 	
 	
 }

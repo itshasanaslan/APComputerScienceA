@@ -1,5 +1,6 @@
 package unit6;
 
+
 import unit5.Dog;
 import unit5.Student;
 
@@ -7,7 +8,22 @@ public class Program {
 
 	public static void main(String[] args) {
 	 
-		ArrayManipulator manipulator = new ArrayManipulator();
+	
+		int[] numbers = {1,2,3,3,3,4,5,6};
+		
+		
+		// numbers is just a reference. We can assign new array's reference on numbers
+		numbers =  ArrayManipulator.removeFromArray(numbers, 3);
+		
+		System.out.println(ArrayManipulator.getArrayAsString(numbers));
+	
+	}
+		
+		
+
+		
+	public static void workAround() {
+	ArrayManipulator manipulator = new ArrayManipulator();
 		
 		Student[] studentArray = {
 				new Student("deniz", "iper", "u733", 4.00), 
@@ -18,28 +34,34 @@ public class Program {
 		for (int i = 0; i < studentArray.length; i++) {
 			studentArray[i].setGpa(4);
 		}
-		
-		
 		printStudents(studentArray);
-		
-		
 		
 		for (int i = 0; i < studentArray.length; i++) {
 			Student tempStudent = studentArray[i];
 			tempStudent.setGpa(3);
 		}
 		
+		for (Student student : studentArray) {
+			student.setGpa(2);
+		}
+		
 		printStudents(studentArray);
+		int[] numbers = {1,2,3,4,5,6,7,8};
 
+		numbers[2] = 10;
+		int firstElement = numbers[0];
+		firstElement = 999;
+		System.out.println(firstElement); // it will print 999
 		
+		//Let's see the final version of our array
 		
+		System.out.println(ArrayManipulator.getArrayAsString(numbers));
 		
-		
+	}
 //		
 	
 		
-		}
-		
+
 	
 	public static void printStudents(Student[] s) {
 		for (int i = 0; i < s.length; i++) {
@@ -88,6 +110,9 @@ public class Program {
 		for (int element : customArray) {
 			System.out.println(element);
 		}
+		
+		
+	
 		
 	}
 	

@@ -27,8 +27,8 @@ public class Program {
 		
 		System.out.println("Printing dog name again: " + dog1.getName());
 
-		
-		
+		Student[] students = new Student[3];
+		// assume that students are given
 
 	}
 	
