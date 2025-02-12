@@ -6,34 +6,30 @@ public class Student {
 	private String lastName; // restricting fields' scope
 	private String id;
 	private double gpa;
-	
-	
+
 	// create an instance. Then, set the values.
-	// Set the values the moment we Create the instance 
-	
+	// Set the values the moment we Create the instance
+
 	public Student(String name, String lastName, String id, double gpa) {
 		this.name = name;
 		this.lastName = lastName;
 		this.id = id;
 		this.gpa = gpa;
 		studentCounter++;
-		// you can call a constructor inside from 
+		// you can call a constructor inside from
 	}
-	
-	//override
+
+	// override
 	public Student() {
 		System.out.println("New student is registered");
 		studentCounter++;
 
 	}
-	
-	
-	public static void echoCounter()
-	{
+
+	public static void echoCounter() {
 		System.out.println("Current student count: " + Student.studentCounter);
 	}
-	
-	
+
 	public String getName() {
 		return name;
 	}
@@ -67,36 +63,9 @@ public class Student {
 		this.gpa = gpa;
 	}
 
-	
 	// overriding
 	public String toString() {
-		return this.name + " " + this.lastName + " GPA:" + this.gpa; 
+		return this.name + " " + this.lastName + " GPA:" + this.gpa;
 	}
-	
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
