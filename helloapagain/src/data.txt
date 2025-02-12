@@ -1,4 +1,4 @@
-Elif
+elif
 Megan
 Murat
 Elif
@@ -612,7 +612,7 @@ Deniz
 Megan
 Emre
 Richard
-Christopher
+christopher
 Ahmet
 Michael
 Joseph
@@ -643,7 +643,7 @@ Ayşe
 Robert
 Mustafa
 Mehmet
-Christopher
+christopher
 Mehmet
 Hüseyin
 Baran
@@ -693,7 +693,7 @@ Robert
 John
 Ahmet
 Deniz
-Christopher
+christopher
 Mehmet
 Hasan
 Ahmet
@@ -773,7 +773,7 @@ Mary
 Matthew
 Andrew
 Charles
-Christopher
+christopher
 Hasan
 Joshua
 Ali
@@ -860,7 +860,7 @@ Patricia
 Megan
 Ayşe
 Fatma
-Christopher
+christopher
 Ayşe
 Murat
 Charles
@@ -946,7 +946,7 @@ Hülya
 Hülya
 Charles
 William
-Christopher
+christopher
 Fatma
 James
 Hüseyin
@@ -961,7 +961,7 @@ Fatma
 Thomas
 John
 William
-Christopher
+christopher
 Ahmet
 Mehmet
 Daniel
@@ -1016,7 +1016,7 @@ Megan
 William
 William
 Emre
-Christopher
+christopher
 Michael
 Hasan
 Veli
@@ -1166,7 +1166,7 @@ Fatma
 David
 Mary
 Veli
-Christopher
+christopher
 Thomas
 James
 Serkan
@@ -1365,7 +1365,7 @@ Patricia
 Robert
 Ahmet
 Mehmet
-Christopher
+christopher
 Linda
 David
 Joseph
@@ -1396,7 +1396,7 @@ John
 Richard
 Ali
 Serkan
-Christopher
+christopher
 Fatma
 Thomas
 Mustafa
@@ -1413,7 +1413,7 @@ Seda
 Seda
 Ali
 Fatma
-Christopher
+christopher
 Baran
 David
 Mustafa
@@ -1452,7 +1452,7 @@ Hüseyin
 Mehmet
 Seda
 Hasan
-Christopher
+christopher
 Robert
 Robert
 Hasan
@@ -1493,7 +1493,7 @@ Veli
 Hasan
 Andrew
 Seda
-Christopher
+christopher
 Zeynep
 Robert
 Mary
@@ -1528,7 +1528,7 @@ Murat
 Patricia
 Cem
 Hüseyin
-Christopher
+christopher
 Seda
 Daniel
 Ali
@@ -1573,7 +1573,7 @@ Hasan
 John
 Elif
 Hüseyin
-Christopher
+christopher
 Robert
 Joshua
 Murat
@@ -1607,7 +1607,7 @@ Hülya
 Hülya
 Elif
 Matthew
-Christopher
+christopher
 Joseph
 Zeynep
 Ahmet
@@ -1668,7 +1668,7 @@ Richard
 Patricia
 Emre
 Veli
-Christopher
+christopher
 Seda
 Linda
 Elizabeth
@@ -1750,7 +1750,7 @@ Patricia
 Joseph
 Mary
 Zeynep
-Christopher
+christopher
 Matthew
 Mustafa
 Joshua
@@ -1766,10 +1766,10 @@ William
 Zeynep
 Hüseyin
 Murat
-Christopher
+christopher
 Zeynep
 Elif
-Christopher
+christopher
 William
 Cem
 Ayşe
@@ -1796,7 +1796,7 @@ William
 Hüseyin
 Matthew
 Hüseyin
-Christopher
+christopher
 Linda
 Zeynep
 Matthew
@@ -1832,8 +1832,8 @@ Mehmet
 Ahmet
 Patricia
 Veli
-Christopher
-Christopher
+christopher
+christopher
 Mustafa
 Elif
 Deniz
@@ -1941,7 +1941,7 @@ Thomas
 Linda
 Ayşe
 Richard
-Christopher
+christopher
 Andrew
 Megan
 Ahmet
@@ -1980,7 +1980,7 @@ Daniel
 Mehmet
 Deniz
 Mehmet
-Christopher
+christopher
 Zeynep
 John
 Mehmet
@@ -2004,7 +2004,7 @@ Hüseyin
 Richard
 Michael
 Seda
-Christopher
+christopher
 Elizabeth
 Daniel
 Cem
@@ -2042,7 +2042,7 @@ Hülya
 Ayşe
 Christopher
 Ayşe
-Christopher
+christopher
 Hasan
 Murat
 Joseph
@@ -2050,7 +2050,7 @@ Zeynep
 William
 Patricia
 Joshua
-Christopher
+christopher
 Elizabeth
 Mehmet
 Cem
@@ -2092,11 +2092,11 @@ Zeynep
 Zeynep
 Patricia
 David
-Mehmet
-Megan
-Hüseyin
+mehmet
+megan
+hüseyin
 James
-Christopher
+christopher
 Mary
 Megan
 Mustafa
@@ -9979,7 +9979,7 @@ Mehmet
 Hüseyin
 Robert
 Michael
-Christopher
+christopher
 Mary
 Daniel
 Joseph

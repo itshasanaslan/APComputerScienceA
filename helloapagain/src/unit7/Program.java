@@ -10,27 +10,69 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		// 1st method Arrays.asList()
-		ArrayList<Integer> myList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+		ArrayList<String> names = 	new ArrayList<String>();
+		
+		names.add("Elif");
+		names.add("Megan");
+		names.add("Murat");
 
-		myList.add(10);
-		int indexOf10 = myList.indexOf(10);
-		int removedElement = myList.remove(indexOf10);
-
-		int[] myArray = { 1, 2, 3, 4, 5, 10 };
-
-		int removedOne = myArray[5];
-		myArray[5] = 154;
-
-		System.out.println(myList.set(5, 154));
-
-		// forgot to mention, sorry
-		// returns the element in the specific position
-		myList.get(indexOf10);
-
+				//SimpleFileReader.getMockData("", false);
+		
+	
+		
+		boolean exists = exists(names, "elif"); 
+		
+		System.out.println(exists);
+	
+		
+		ArrayList<Double> doubleList = new ArrayList<Double>(Arrays.asList(1.0, 2.5, 3.9, 5.1));
+		double lookFor = 4.0;
+		double delta = 0.2;
+		
+		System.out.println(findIndexInDoubleList(doubleList, 2.2, delta));
+	
+		// write a function that searches a double list and finds the specified item's index.
+		
+		
 	}
-
-	public static void arrayListCreations() {
+	public static int findIndexInDoubleList(ArrayList<Double> doubleList, double lookForThis, double delta) {
+		
+		for (int i = 0; i < doubleList.size(); i++) {
+			double d = doubleList.get(i);
+			if (Math.abs(d - lookForThis) <= delta) {
+				return i;
+			}	
+		}
+		return -1;
+	}
+	
+	public static boolean exists(ArrayList<String> strList, String lookForThis) {
+		
+		for (int i = 0 ; i < strList.size(); i++) {
+			if (lookForThis.toLowerCase().equals(strList.get(i).toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static int findIndex(ArrayList<String> strList, String lookForThis) {
+		
+		for (int i = 0 ; i < strList.size(); i++) {
+			if (lookForThis.toLowerCase().equals(strList.get(i).toLowerCase())) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	
+	
+	
+	
+	
+ 	public static void arrayListCreations() {
 		// primitive types and objects
 		// arraylists to store objects
 
@@ -109,5 +151,7 @@ public class Program {
 		int removedElement = myList.remove(myList.indexOf(20));
 
 	}
+	
+	
 
 }
