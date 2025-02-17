@@ -5,22 +5,74 @@ import java.util.Arrays;
 import java.util.List;
 
 import unit5.Student;
+import unit6.ArrayManipulator;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		ArrayList<String> names = 	new ArrayList<String>();
+		// Sorting
+		int[] nums  = {12,4,3,2,19,21,92,53};
+			
+		//swapping
 		
-		names.add("Elif");
-		names.add("Megan");
-		names.add("Murat");
-
-				//SimpleFileReader.getMockData("", false);
+		int temp = nums[0];
+		nums[0] = nums[1];
+		nums[1] = temp;
+		
+		long startTime = System.nanoTime();
+		selectionSort(nums);
+		long endTime = System.nanoTime();
+		System.out.println(ArrayManipulator.getArrayAsString(nums));
+		//Find the smallest element in the array.
+		//Swap it with the first element.
+		//Move to the next position and repeat.
 		
 	
+	
+		long duration = endTime - startTime; // Calculate time in nanoseconds
+	    System.out.println("Execution time: " + duration + " nanoseconds");
+	    System.out.println("Execution time: " + (duration / 1_000_000.0) + " milliseconds");
+	
+	}
+	// {12,4,3,2,19,21,92,53};
+
+	//Look at all the nums and find the smallest one.
+	//Swap it with the first num in the row.
+	//Now, ignore the first num (because it's already sorted ✅) and look at the rest of the nums.
+	//Find the next smallest num and move it to the second spot.
+	//Keep repeating until all nums are sorted
+
+	
+	public static void selectionSort(int[] arr) {
+		int n = arr.length;
+		// assign arrays length to a variable
 		
-		boolean exists = exists(names, "elif"); 
+		for (int index = 0; index < n; index++) {
+			int minimumIndex = index;
+			
+			//second loop
+			for (int j = index + 1; j < n; j++) {
+				//
+				if (arr[j] < arr[minimumIndex]) {
+					minimumIndex = j;
+				}
+			}
+			
+			  // Swap elements
+            int temp = arr[index];
+            arr[index] = arr[minimumIndex];
+            arr[minimumIndex] = temp;
+		}
+		// {12,4,3,2,19,21,92,53};
+	}
+	
+	
+	// {2,4,3,12,19,21,92,53};
+		public static void searching() {
+		ArrayList<String> names = 	new ArrayList<String>();
+		
+		boolean exists = exists(names, "Elif"); 
 		
 		System.out.println(exists);
 	
@@ -33,8 +85,8 @@ public class Program {
 	
 		// write a function that searches a double list and finds the specified item's index.
 		
-		
 	}
+	
 	public static int findIndexInDoubleList(ArrayList<Double> doubleList, double lookForThis, double delta) {
 		
 		for (int i = 0; i < doubleList.size(); i++) {
