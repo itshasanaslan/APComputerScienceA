@@ -2,6 +2,8 @@ package unit7;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import unit5.Student;
@@ -12,28 +14,12 @@ public class Program {
 	public static void main(String[] args) {
 
 		// Sorting
-		int[] nums  = {12,4,3,2,19,21,92,53};
-			
-		//swapping
+		int[] nums  = ArrayManipulator.getRandomArray(0, 100, 20);
+		ArrayList<Integer> numsList =  ArrayManipulator.getRandomArrayList(0, 100, 20);
+
+		Collections.sort(numsList, Comparator.reverseOrder());
+		System.out.println(numsList);
 		
-		int temp = nums[0];
-		nums[0] = nums[1];
-		nums[1] = temp;
-		
-		long startTime = System.nanoTime();
-		selectionSort(nums);
-		long endTime = System.nanoTime();
-		System.out.println(ArrayManipulator.getArrayAsString(nums));
-		//Find the smallest element in the array.
-		//Swap it with the first element.
-		//Move to the next position and repeat.
-		
-	
-	
-		long duration = endTime - startTime; // Calculate time in nanoseconds
-	    System.out.println("Execution time: " + duration + " nanoseconds");
-	    System.out.println("Execution time: " + (duration / 1_000_000.0) + " milliseconds");
-	
 	}
 	// {12,4,3,2,19,21,92,53};
 
@@ -65,10 +51,32 @@ public class Program {
             arr[minimumIndex] = temp;
 		}
 		// {12,4,3,2,19,21,92,53};
+		// {2,4,3,12,19,21,92,53};
+
 	}
 	
 	
-	// {2,4,3,12,19,21,92,53};
+	
+
+	//Start with the second element and compare it with the previous element.
+	//If it's smaller, shift larger elements to the right and insert it in the correct position.
+	//Repeat for all elements.
+
+
+	public static void insertionSort(int[] arr) {
+    for (int i = 1; i < arr.length; i++) {  // Start from the second element
+        int key = arr[i]; // Element to be inserted
+        int j = i - 1;
+
+        // Move elements of arr[0..i-1] that are greater than key one position ahead
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key; // Insert key into its correct position
+    }
+	}	
+
 		public static void searching() {
 		ArrayList<String> names = 	new ArrayList<String>();
 		

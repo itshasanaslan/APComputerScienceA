@@ -1,5 +1,7 @@
 package unit6;
 
+import java.util.ArrayList;
+
 public class ArrayManipulator {
 
 	public static String getArrayAsString(String[] someArray) {
@@ -87,6 +89,22 @@ public class ArrayManipulator {
 
 		// return its reference so we can access it
 		return copiedArray;
+	}
+	
+	public static int[] getRandomArray(int min, int max, int length) {
+		int[] arr = new int[length];
+		for (int i = 0; i < length; i++) {
+			arr[i] = (int) (Math.random() * (max - min + 1)) + min;
+		}
+		
+		return arr;
+	}
+	public static ArrayList<Integer> getRandomArrayList(int min, int max, int length) {
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		for (int i = 0; i < length; i++) {
+			arr.add((int) (Math.random() * (max - min + 1)) + min);
+		}
+		return arr;
 	}
 
 }
