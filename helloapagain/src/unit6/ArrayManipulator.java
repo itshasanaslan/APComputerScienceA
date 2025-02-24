@@ -106,5 +106,25 @@ public class ArrayManipulator {
 		}
 		return arr;
 	}
+	
+	
+	public static String get2DArrayAsString(int[][] arr) {
+		String s = "[";
+		
+		
+		for (int i = 0; i < arr.length; i++) {
+			s+= "\n[";
+			for (int j = 0; j < arr[i].length; j++) {
+				s+= arr[i][j] + ", ";
+			}
+			
+			s+= "],";
+		}
+		
+		
+		s += "\n]";
+	
+		return s;
+	}
 
 }
