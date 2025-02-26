@@ -2,11 +2,79 @@ package unit8;
 
 import java.util.Arrays;
 
+import unit5.Car;
 import unit6.ArrayManipulator;
 
 public class Program {
 
 	public static void main(String[] args) {
+		
+		char[][] board = {
+				{'-','-','-'},
+				{'-','-','-'},
+				{'-','-','-'},
+		};
+		
+		
+
+	
+	board[0][0] = 'X';
+	board[1][1] = 'O';
+	for (char[] array: board) {
+		
+		for (char col: array ) {
+			System.out.print(col + " ");
+		}
+		
+		System.out.println();
+	}
+	}
+	
+	
+	public static void transpose() {
+	// transpose
+		
+		/*
+		 * 	1 2 3
+			4 5 6
+			7 8 9
+			
+			1 4 7 
+			2 5 8 
+			3 6 9 
+		 * 
+		 * 
+		 * 
+		 */
+		
+		int[][] mainArray = {
+				{1, 2, 3},
+				{4, 5, 6},
+				{7, 8, 9}
+			};
+		
+		
+		int[][] transpose = new int[3][3];
+		
+		
+		for (int row = 0;  row < mainArray.length; row++) {
+			for (int col = 0; col < mainArray[row].length;col++ ) {
+				transpose[col][row]  = mainArray[row][col];
+			}
+		}
+		
+		// print 2d array
+		
+		for (int[] array: transpose) {
+			
+			for (int col: array ) {
+				System.out.print(col + " ");
+			}
+			
+			System.out.println();
+		}
+	}
+		public static void introTo2DArrays() {
 
 		// TODO Auto-generated method stub
 		int[] array = new int[4];
@@ -51,7 +119,6 @@ public class Program {
 		int[][] random2D = generateRandom2D(100);
 		System.out.println(ArrayManipulator.get2DArrayAsString(random2D));
 		calculateSumsinMatrix(random2D);
-		
 	}
 	
 	public static int findDiagonalSum(int[][] matrix) {
