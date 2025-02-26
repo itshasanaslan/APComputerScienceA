@@ -32,32 +32,75 @@ public class TicTacToe {
     // Initializes the board with empty spaces
     public void initializeBoard() {
         // TODO: Fill this function to initialize the board with '-'
+    	  for (int i = 0; i < 3; i++) {
+              for (int j = 0; j < 3; j++) {
+                  board[i][j] = '-';
+              }
+          }
     }
 
     // Prints the board
     public void printBoard() {
-        // TODO: Fill this function to print the current board state
+        System.out.println("Current board:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     // Handles player move input
     public void playerMove(Scanner scanner) {
-        // TODO: Fill this function to take user input and update the board if the move is valid
+        int row, col;
+        while (true) {
+            System.out.println("Player " + currentPlayer + ", enter row and column (0-2): ");
+            row = scanner.nextInt();
+            col = scanner.nextInt();
+            
+            if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == '-') {
+                board[row][col] = currentPlayer;
+                break;
+            } else {
+                System.out.println("Invalid move, try again.");
+            }
+        }
     }
+
 
     // Switches to the next player
     public void switchPlayer() {
-        // TODO: Fill this function to switch the current player
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
 
     // Checks if the board is full (tie condition)
     public boolean isBoardFull() {
-        // TODO: Fill this function to check if the board is full
-        return false;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '-') {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     // Checks if a player has won
     public boolean checkWin() {
-        // TODO: Fill this function to check for a winning condition
+        // Check rows and columns
+        for (int i = 0; i < 3; i++) {
+            if ((board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) ||
+                (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer)) {
+                return true;
+            }
+        }
+        
+        // Check diagonals
+        if ((board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) ||
+            (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer)) {
+            return true;
+        }
+        
         return false;
     }
 }
