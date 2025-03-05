@@ -70,8 +70,24 @@ If the amount is greater than $100, apply a 20% discount.
 Otherwise, no discount.
 Print the final amount after applying the discount.
 		""";
+
+public static String dataTypeAllocations = """
+byte	8	0	-128 to 127
+short	16	0	-32,768 to 32,767
+int	32	0	-2³¹ to 2³¹-1
+long	64	0L	-2⁶³ to 2⁶³-1
+float	32	0.0f	~7 decimal places
+double	64	0.0d	~15 decimal places
+char	16	'\u0000'	Unicode characters (0 to 65,535)
+boolean	1 (JVM dependent)	false	true or false
+""";
+
 	public static void assign(String task) {
 		System.out.println(task);
+	}
+	
+	public static void showDataAllocations() {
+		System.out.println(dataTypeAllocations);
 	}
 	
 }
